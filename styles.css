@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+p {
+  line-height: 23px;
+}
+
+section {
+  padding: 30px 5%;
+}
+
+a {
+  color: red;
+}
+
+.button-primary,
+.button-secondary {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(105, 104, 105);
+}
+
+.button-primary {
+  background-color: rgb(105, 104, 105);
+  color: white;
+  margin-right: 10px;
+}
+
+.button-primary:hover {
+  background-color: white;
+  color: rgb(105, 104, 105);
+}
+
+.button-secondary {
+  background-color: white;
+  color: rgb(105, 104, 105);
+}
+
+.button-secondary:hover {
+  background-color: rgb(105, 104, 105);
+  color: white;
+}
+
+/* header section */
+
+.background-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(105, 104, 105, 0, 8);
+  display: flex;
+  justify-content: center; /* Einfache Lösung, damit man alles in einer Section stylen kann. */
+  align-items: center;
+}
+
+.header {
+  height: 70vh;
+  color: white;
+  background: url(assets/background.jpg) no-repeat fixed;
+  background-size: cover;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* about me section */
+
+.about-me {
+  display: flex;
+  align-items: center;
+  min-height: 150px;
+}
+
+.about-me div:first-child {
+  flex: 1;
+}
+
+.about-me div:last-child {
+  flex: 2;
+  padding: 20px;
+}
+
+.about-me img {
+  width: 100%;
+}
+
+/* Peojects section */
+
+.skills {
+  background-color: rgb(105, 104, 105);
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  padding: 30px;
+}
+
+.skills ul {
+  display: flex;
+  /* makes the list items in one row*/
+  justify-content: space-around;
+  flex: wrap;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.skills ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.skills ul li img {
+  border: 4px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.skills ul li .title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Peojects section */
+
+.projects ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects ul li {
+  list-style: none;
+  height: 300px;
+  width: calc(100% / 3);
+  position: relative;
+  cursor: pointer;
+}
+
+.projects ul li p {
+  display: none;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.projects ul li:hover p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(103, 104, 103, 0.7);
+}
+
+.projects h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+.projects ul li.project-1 {
+  background: url(assets/project1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.projects ul li.project-2 {
+  background: url(assets/project2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.projects ul li.project-3 {
+  background: url(assets/project3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.projects ul li.project-4 {
+  background: url(assets/project4.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.projects ul li.project-5 {
+  background: url(assets/project5.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.projects ul li.project-6 {
+  background: url(assets/project6.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* Responsive  */
+
+@media screen and (max-width: 793px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .header {
+    height: 40vh;
+  }
+
+  .about-me {
+    flex-direction: column;
+  }
+
+  .skills ul {
+    flex-direction: column;
+  }
+
+  .projects ul li {
+    width: 100%;
+  }
+}
